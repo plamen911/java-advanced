@@ -14,7 +14,7 @@ public class Main {
         ArrayDeque<Long> queue = new ArrayDeque<>();
         queue.addFirst(n);
 
-        for (Long i = n; i < n + 50; i++) {
+        for (int i = 0; i < 50; i++) {
             Long current = queue.removeFirst();
             System.out.printf("%d ", current);
 
