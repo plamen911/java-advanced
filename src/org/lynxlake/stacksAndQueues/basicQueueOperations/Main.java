@@ -22,17 +22,17 @@ public class Main {
             throw new IllegalArgumentException(";(");
         }
 
-        // push onto the stack
+        // push onto the queue
         for (int i = 0; i < n; i++) {
             myQueue.add(Integer.parseInt(integers[i]));
         }
 
-        // pop from the stack
+        // pop from the queue
         for (int i = 0; i < s; i++) {
             myQueue.remove();
         }
 
-        // is x present in the stack
+        // is x present in the queue
         if (myQueue.contains(x)) {
             System.out.println("true");
         } else if (myQueue.size() != 0) {
