@@ -7,18 +7,18 @@ Exercises for ["Java Advanced" course @Software University](https://softuni.bg/t
 join array elements with separator
 
 ```
-    private static String join(Collection<?> s, String delimiter) {
-        StringBuilder builder = new StringBuilder();
-        Iterator<?> iter = s.iterator();
-        while (iter.hasNext()) {
-            builder.append(iter.next());
-            if (!iter.hasNext()) {
-                break;
-            }
-            builder.append(delimiter);
+private static String join(Collection<?> s, String delimiter) {
+    StringBuilder builder = new StringBuilder();
+    Iterator<?> iter = s.iterator();
+    while (iter.hasNext()) {
+        builder.append(iter.next());
+        if (!iter.hasNext()) {
+            break;
         }
-        return builder.toString();
+        builder.append(delimiter);
     }
+    return builder.toString();
+}
 ```
 
 lambda expression
@@ -28,3 +28,9 @@ HashSet<String> s = new HashSet<>(set.size());
 set.forEach(i -> s.add(i.toString()));
 System.out.printf("%s", StringUtils.join(s, " "));
 ```
+
+char to int
+
+`int power = card.charAt(0) - '0';`
+
+
