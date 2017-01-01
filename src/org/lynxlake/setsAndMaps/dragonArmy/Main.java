@@ -56,7 +56,7 @@ public class Main {
                     healthAvg / len,
                     armorAvg / len);
 
-            for (Dragon dragon : army.get(type.getKey()).values()) {
+            for (Dragon dragon : type.getValue().values()) {
                 System.out.printf("%s%n", dragon);
             }
         }
