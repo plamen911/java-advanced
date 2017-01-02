@@ -21,8 +21,8 @@ public class Main {
             }
 
             int entryRow = Integer.parseInt(input[0]);
-            int wantedCol = Integer.parseInt(input[2]);
             int wantedRow = Integer.parseInt(input[1]);
+            int wantedCol = Integer.parseInt(input[2]);
             int steps = Math.abs(wantedRow - entryRow) + wantedCol + 1;
             if (wantedCol >= cols || wantedCol <= 0) {
                 System.out.printf("Row %d full%n", wantedRow);
