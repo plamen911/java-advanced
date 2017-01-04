@@ -1,5 +1,5 @@
-// https://judge.softuni.bg/Contests/Practice/Index/189#5
-package org.lynxlake.regularExpressions.sentenceExtractor;
+// https://judge.softuni.bg/Contests/Practice/Index/189#2
+package org.lynxlake.regularExpressions.seriesOfLetters;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,17 +10,15 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String keyword = reader.readLine().trim();
         String text = reader.readLine().trim();
 
-        // String regexp = "[^!?.]+[!?.]";
-        // [^!?.]+\bis\b[^!?.]+[!?.]
-        String regexp = "[^!?.]*" + "\\b" + keyword + "\\b" + "[^!?.]*[!?.]";
+        // String regexp = "([a-z])\\1*";
+        String regexp = "(.)\\1*";
         Pattern pattern = Pattern.compile(regexp);
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            System.out.println(matcher.group(0));
+            System.out.print(matcher.group(1));
         }
     }
 }
