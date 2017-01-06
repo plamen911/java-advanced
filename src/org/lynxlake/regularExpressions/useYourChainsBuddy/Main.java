@@ -11,7 +11,7 @@ public class Main {
         String text = sc.nextLine();
 
         String patternStr = "<p>(.*?(?=<))</p>";
-        String patternReplStr = "[^a-z0-9]+";
+        String patternReplStr = "[^a-z0-9]+";   // all characters which are not small letters and numbers
         String patternSpaceStr = "\\s{2,}";
 
         StringBuilder sb = new StringBuilder();
