@@ -2,10 +2,6 @@
 
 Exercises for ["Java Advanced" course @Software University](https://softuni.bg/trainings/1377/advanced-java-may-2016).
 
-#### Incomplete Points
-
-- Sets and Maps -> 05. Phonebook - 80 / 100
-
 #### Utils
 
 join array elements with separator

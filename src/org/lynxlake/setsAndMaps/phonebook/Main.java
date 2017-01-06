@@ -1,33 +1,29 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#4
 package org.lynxlake.setsAndMaps.phonebook;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        HashMap<String, String> phonebook = new HashMap<>();
-        String input = reader.readLine().trim();
-        while (!input.equalsIgnoreCase("search")) {
-            String[] params = input.split("-");
-            String name = params[0];
-            String phone = params[1];
-            phonebook.put(name, phone);
-            input = reader.readLine().trim();
-        }
-
-        input = reader.readLine().trim();
-        while (!input.equalsIgnoreCase("stop")) {
-            if (phonebook.containsKey(input)) {
-                System.out.printf("%s -> %s%n", input, phonebook.get(input));
-            } else {
-                System.out.printf("Contact %s does not exist.%n", input);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = "";
+        Pattern pat = Pattern.compile("(.+)-(.+)");
+        HashMap<String, String> map = new HashMap<>();
+        while (!(input = sc.nextLine()).equals("search")) {
+            Matcher matcher = pat.matcher(input);
+            if (matcher.find()) {
+                map.put(matcher.group(1), matcher.group(2));
             }
-            input = reader.readLine().trim();
+        }
+        while (!(input = sc.nextLine()).equals("stop")) {
+            if (map.containsKey(input)) {
+                System.out.format("%s -> %s\n", input, map.get(input));
+            } else {
+                System.out.format("Contact %s does not exist.\n", input);
+            }
         }
     }
 }
