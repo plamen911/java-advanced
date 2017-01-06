@@ -34,3 +34,6 @@ char to int
 `int power = card.charAt(0) - '0';`
 
 
+https://github.com/KNikovv/SoftuniHomeworks/tree/master/AdvancedJava/2.SetsAndMaps
+
+
