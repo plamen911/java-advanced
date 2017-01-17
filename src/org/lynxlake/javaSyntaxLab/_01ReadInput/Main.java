@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/382#0
-package org.lynxlake.javaSyntaxLab.readInput;
+package org.lynxlake.javaSyntaxLab._01ReadInput;
 
 import java.util.Scanner;
 
