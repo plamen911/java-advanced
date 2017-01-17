@@ -36,4 +36,8 @@ char to int
 
 https://github.com/KNikovv/SoftuniHomeworks/tree/master/AdvancedJava/2.SetsAndMaps
 
+`Locale.setDefault(Locale.ROOT);` - code to handle doubles platform independently 
+
+
+
 
