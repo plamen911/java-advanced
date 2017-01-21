@@ -38,6 +38,14 @@ https://github.com/KNikovv/SoftuniHomeworks/tree/master/AdvancedJava/2.SetsAndMa
 
 `Locale.setDefault(Locale.ROOT);` - code to handle doubles platform independently 
 
+convert an integer string separated by space into an array
+
+```
+Integer[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
+    .map(Integer::parseInt)
+    .toArray(Integer[]::new);
+```
+
 
 
 
