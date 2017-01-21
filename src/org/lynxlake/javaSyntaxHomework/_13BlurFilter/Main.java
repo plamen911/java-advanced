@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int blurAmount = Integer.parseInt(scanner.nextLine());
+        long blurAmount = Long.parseLong(scanner.nextLine());
         int rows = scanner.nextInt();
         int cols = scanner.nextInt();
         scanner.nextLine();
@@ -20,10 +20,26 @@ public class Main {
             }
         }
 
+        int blurRow = scanner.nextInt();
+        int blurCol = scanner.nextInt();
 
-        System.out.println(blurAmount + " / " + rows + " / " + cols);
-        //System.out.println("line: " + line);
+        // blur
+        for (int i = blurRow - 1; i <= blurRow + 1; i++) {
+            for (int j = blurCol - 1; j <= blurCol + 1; j++) {
+                try {
+                    matrix[i][j] += blurAmount;
+                } catch (IndexOutOfBoundsException ignored) {
 
+                }
 
+            }
+        }
+
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
+                System.out.printf("%d ", anInt);
+            }
+            System.out.println();
+        }
     }
 }
