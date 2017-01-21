@@ -19,7 +19,6 @@ public class Main {
             case "B":
                 matrix = fillWithPatternB(n);
                 break;
-
         }
 
         for (int[] ints : matrix) {
@@ -38,52 +37,19 @@ public class Main {
                 matrix[i][j] = number;
             }
         }
+
         return matrix;
     }
-
-    /*private static int[][] fillWithPatternB(int n) {
-        int[][] matrix = new int[n][n];
-        int last = 0;
-        for (int i = 0; i < n; i++) {
-            int number = 0;
-            for (int j = 0; j < n; j++) {
-                number = last + j + 1;
-                matrix[j][i] = number;
-            }
-            last = number;
-        }
-
-        return matrix;
-    }*/
 
     private static int[][] fillWithPatternB(int n) {
-        int[][] matrix = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                int number;
-                if (j % 2 != 0) {
-                    number = j * n + i + 1;
-                } else {
-                    number = j * n + i + 1;
-                }
-                matrix[i][j] = number;
-            }
-        }
-        return matrix;
-    }
-
-    private static int[][] test_fillWithPatternB(int n) {
+        int[][] baseMatrix = fillWithPatternA(n);
         int[][] matrix = fillWithPatternA(n);
-        for (int m = 0; m < n; m++) {
-            for (int i = 1; i < n; i += 2) {
-                int[] reverced = new int[n];
-                int k = 0;
-                for (int j = n - 1; j >= 0; j--) {
-                    // System.out.println("j: " + j + " k: " + k);
-                    reverced[j] = matrix[i][k];
-                    k++;
-                }
-                matrix[i] = reverced;
+
+        for (int i = 1; i < n; i += 2) {
+            int k = n - 1;
+            for (int j = 0; j < n; j++) {
+                matrix[j][i] = baseMatrix[k][i];
+                k--;
             }
         }
 
