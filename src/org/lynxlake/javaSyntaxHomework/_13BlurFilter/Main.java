@@ -11,12 +11,12 @@ public class Main {
         int cols = scanner.nextInt();
         scanner.nextLine();
 
-        int[][] matrix = new int[rows][cols];
+        long[][] matrix = new long[rows][cols];
 
         for (int i = 0; i < rows; i++) {
             String[] numbers = scanner.nextLine().split("\\s+");
             for (int j = 0; j < cols; j++) {
-                matrix[i][j] = Integer.parseInt(numbers[j]);
+                matrix[i][j] = Long.parseLong(numbers[j]);
             }
         }
 
@@ -31,12 +31,11 @@ public class Main {
                 } catch (IndexOutOfBoundsException ignored) {
 
                 }
-
             }
         }
 
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
+        for (long[] ints : matrix) {
+            for (long anInt : ints) {
                 System.out.printf("%d ", anInt);
             }
             System.out.println();
