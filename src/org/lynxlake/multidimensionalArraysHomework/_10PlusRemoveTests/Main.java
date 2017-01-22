@@ -1,3 +1,4 @@
+// https://judge.softuni.bg/Contests/Practice/Index/387#9
 package org.lynxlake.multidimensionalArraysHomework._10PlusRemoveTests;
 
 import java.util.ArrayList;

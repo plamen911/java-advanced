@@ -46,6 +46,9 @@ Integer[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
     .toArray(Integer[]::new);
 ```
 
+### Incomplete points: 
+- StringMatrixRotationTests (80 / 100): https://judge.softuni.bg/Contests/Practice/Index/387#10
+
 
 
 
