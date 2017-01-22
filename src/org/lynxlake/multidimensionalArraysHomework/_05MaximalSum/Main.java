@@ -22,31 +22,21 @@ public class Main {
         Integer maxSumValue = Integer.MIN_VALUE;
         Integer[][] maxSumMatrix = new Integer[3][3];
 
-        for (int i = 0; i < n - 3; i++) {
-            for (int j = 0; j < m - 3; j++) {
+        for (int i = 0; i <= n - 3; i++) {
+            for (int j = 0; j <= m - 3; j++) {
 
-                Integer tmpSum = 0;
+                Integer tmpValue = 0;
                 Integer[][] tmpMatrix = new Integer[3][3];
-                int rows = 0;
-                int cols = 0;
-                for (int k = i; k < i + 3; k++) {
-                    for (int l = j; l < j + 3; l++) {
 
-                        System.out.println("k: " + k + " l: " + l + " / " + matrix[k][l]);
-
-                        // maxSumMatrix[k][l] = matrix[k][l];
-                        // maxSumMatrix[rows][cols] = matrix[k][l];
-                        // tmpSum += matrix[k][l];
-                        cols++;
+                for (int k = 0; k < 3; k++) {
+                    for (int l = 0; l < 3; l++) {
+                        tmpValue += matrix[i + k][j + l];
+                        tmpMatrix[k][l] = matrix[i + k][j + l];
                     }
-
-                    rows++;
                 }
 
-                System.out.println();
-
-                if (tmpSum > maxSumValue) {
-                    maxSumValue = tmpSum;
+                if (tmpValue > maxSumValue) {
+                    maxSumValue = tmpValue;
                     maxSumMatrix = tmpMatrix;
                 }
             }
