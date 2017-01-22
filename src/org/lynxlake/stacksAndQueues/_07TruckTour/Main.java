@@ -1,5 +1,5 @@
-// https://judge.softuni.bg/Contests/Practice/Index/187#5
-package org.lynxlake.stacksAndQueues.truckTour;
+// https://judge.softuni.bg/Contests/Practice/Index/187#6
+package org.lynxlake.stacksAndQueues._07TruckTour;
 
 import java.io.BufferedReader;
 import java.io.IOException;

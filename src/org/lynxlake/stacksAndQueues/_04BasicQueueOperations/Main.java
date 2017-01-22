@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#3
-package org.lynxlake.stacksAndQueues.basicQueueOperations;
+package org.lynxlake.stacksAndQueues._04BasicQueueOperations;
 
 import java.io.BufferedReader;
 import java.io.IOException;

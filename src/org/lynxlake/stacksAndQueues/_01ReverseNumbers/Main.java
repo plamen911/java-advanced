@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#0
-package org.lynxlake.stacksAndQueues.reverseNumbers;
+package org.lynxlake.stacksAndQueues._01ReverseNumbers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
