@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#10
-package org.lynxlake.stacksAndQueues._11SimpleTextEditor;
+package org.lynxlake.stacksAndQueuesHomework._11SimpleTextEditor;
 
 import java.util.Scanner;
 import java.util.Stack;

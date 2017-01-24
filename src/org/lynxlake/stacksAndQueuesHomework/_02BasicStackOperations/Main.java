@@ -1,11 +1,11 @@
-// https://judge.softuni.bg/Contests/Practice/Index/187#3
-package org.lynxlake.stacksAndQueues._04BasicQueueOperations;
+// https://judge.softuni.bg/Contests/Practice/Index/187#1
+package org.lynxlake.stacksAndQueuesHomework._02BasicStackOperations;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Queue;
+import java.util.Collections;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,34 +15,30 @@ public class Main {
         int s = Integer.parseInt(input[1]);
         int x = Integer.parseInt(input[2]);
 
-        Queue<Integer> myQueue = new ArrayDeque<>();
+        Stack<Integer> myStack = new Stack<>();
         String[] integers = reader.readLine().trim().split("\\s+");
 
         if (n != integers.length) {
             throw new IllegalArgumentException(";(");
         }
 
-        // push onto the queue
+        // push onto the stack
         for (int i = 0; i < n; i++) {
-            myQueue.add(Integer.parseInt(integers[i]));
+            myStack.add(Integer.parseInt(integers[i]));
         }
 
-        // pop from the queue
+        // pop from the stack
         for (int i = 0; i < s; i++) {
-            myQueue.remove();
+            int current = myStack.pop();
         }
 
-        // is x present in the queue
-        if (myQueue.contains(x)) {
+        // is x present in the stack
+        if (myStack.search(x) != -1) {
             System.out.println("true");
-        } else if (myQueue.size() != 0) {
-            int smallest = Integer.MAX_VALUE;
-            for (Integer e : myQueue) {
-                if (e < smallest) {
-                    smallest = e;
-                }
-            }
-            System.out.println(smallest);
+        } else if (!myStack.empty()) {
+            // print smallest element
+            Collections.sort(myStack);
+            System.out.println(myStack.firstElement());
         } else {
             System.out.println("0");
         }

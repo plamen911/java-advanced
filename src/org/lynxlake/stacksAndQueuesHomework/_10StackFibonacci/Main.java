@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#9
-package org.lynxlake.stacksAndQueues._10StackFibonacci;
+package org.lynxlake.stacksAndQueuesHomework._10StackFibonacci;
 
 import java.math.BigInteger;
 import java.util.Scanner;

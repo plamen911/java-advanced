@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#12
-package org.lynxlake.stacksAndQueues._13EvaluateExpression;
+package org.lynxlake.stacksAndQueuesHomework._13EvaluateExpression;
 
 import java.util.Scanner;
 import java.util.Stack;
