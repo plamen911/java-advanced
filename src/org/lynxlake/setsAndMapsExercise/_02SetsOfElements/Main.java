@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#1
-package org.lynxlake.setsAndMaps.setsOfElements;
+package org.lynxlake.setsAndMapsExercise._02SetsOfElements;
 
 import java.util.*;
 

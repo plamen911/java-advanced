@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#13
-package org.lynxlake.setsAndMaps.dragonArmy;
+package org.lynxlake.setsAndMapsExercise._14DragonArmy;
 
 import java.io.BufferedReader;
 import java.io.IOException;

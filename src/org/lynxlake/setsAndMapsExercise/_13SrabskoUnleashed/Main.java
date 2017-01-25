@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#12
-package org.lynxlake.setsAndMaps.srabskoUnleashed;
+package org.lynxlake.setsAndMapsExercise._13SrabskoUnleashed;
 
 import java.util.IllegalFormatException;
 import java.util.LinkedHashMap;

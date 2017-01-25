@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#2
-package org.lynxlake.setsAndMaps.periodicTable;
+package org.lynxlake.setsAndMapsExercise._03PeriodicTable;
 
 import java.util.*;
 

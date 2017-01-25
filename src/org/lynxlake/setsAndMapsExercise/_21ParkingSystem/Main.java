@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#20
-package org.lynxlake.setsAndMaps.parkingSystem;
+package org.lynxlake.setsAndMapsExercise._21ParkingSystem;
 
 import java.util.HashSet;
 import java.util.Scanner;

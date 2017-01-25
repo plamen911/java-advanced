@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#10
-package org.lynxlake.setsAndMaps.logsAggregator;
+package org.lynxlake.setsAndMapsExercise._11LogsAggregator;
 
 import java.util.Map;
 import java.util.Scanner;

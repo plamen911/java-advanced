@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#0
-package org.lynxlake.setsAndMaps.uniqueUsernames;
+package org.lynxlake.setsAndMapsExercise._01UniqueUsernames;
 
 import java.io.BufferedReader;
 import java.io.IOException;

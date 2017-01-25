@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#7
-package org.lynxlake.setsAndMaps.handsOfCards;
+package org.lynxlake.setsAndMapsExercise._08HandsOfCards;
 
 import java.io.BufferedReader;
 import java.io.IOException;

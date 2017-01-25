@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#11
-package org.lynxlake.setsAndMaps.legendaryFarming;
+package org.lynxlake.setsAndMapsExercise._12LegendaryFarming;
 
 import java.util.Map;
 import java.util.Scanner;

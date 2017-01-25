@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#4
-package org.lynxlake.setsAndMaps.phonebook;
+package org.lynxlake.setsAndMapsExercise._05Phonebook;
 
 import java.util.HashMap;
 import java.util.Scanner;

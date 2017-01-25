@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#5
-package org.lynxlake.setsAndMaps.aMinerTask;
+package org.lynxlake.setsAndMapsExercise._06AMinerTask;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

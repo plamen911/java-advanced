@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#8
-package org.lynxlake.setsAndMaps.userLogs;
+package org.lynxlake.setsAndMapsExercise._09UserLogs;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

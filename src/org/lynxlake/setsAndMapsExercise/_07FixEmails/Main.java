@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#6
-package org.lynxlake.setsAndMaps.fixEmails;
+package org.lynxlake.setsAndMapsExercise._07FixEmails;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

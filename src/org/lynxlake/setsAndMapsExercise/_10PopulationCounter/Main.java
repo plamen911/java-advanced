@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/188#9
-package org.lynxlake.setsAndMaps.populationCounter;
+package org.lynxlake.setsAndMapsExercise._10PopulationCounter;
 
 import java.io.IOException;
 import java.util.*;
