@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner  = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int[] setsSize = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
