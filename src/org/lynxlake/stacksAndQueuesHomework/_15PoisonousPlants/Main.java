@@ -1,58 +1,37 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#14
 package org.lynxlake.stacksAndQueuesHomework._15PoisonousPlants;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = Integer.parseInt(scanner.nextLine());
-        Integer[] plants = Arrays.stream(scanner.nextLine().split("\\s+"))
-                .map(Integer::parseInt)
-                .toArray(Integer[]::new);
-        int[] days = new int[n];
-        int[] minElement = new int[n];
+        int n = scanner.nextInt();
+        int[] plants = new int[n];
+        Deque<Integer> previousPlantData = new ArrayDeque<>();
 
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < n; i++) {
-            if (plants[i] < min) {
-                min = plants[i];
-            }
-            minElement[i] = min;
+        for (int i = 0; i < plants.length; i++) {
+            plants[i] = scanner.nextInt();
         }
 
-        int max = 0;
-        int maxIndex = 0;
-
-        for (int i = 1; i < n; i++) {
-            if (plants[i] > plants[i - 1]) {
-                days[i] = 1;
-                if (days[i] >= max) {
-                    maxIndex = i;
-                    max = days[i];
-                }
-                continue;
+        int[] days = new int[plants.length];
+        previousPlantData.push(0);
+        for (int x = 1; x < plants.length; x++) {
+            int maxDays = 0;
+            while (previousPlantData.size() > 0 && plants[previousPlantData.peek()] >= plants[x]) {
+                maxDays = Integer.max(days[previousPlantData.pop()], maxDays);
             }
-
-            if (plants[i] > minElement[i]) {
-                if (plants[i] > plants[maxIndex]) {
-                    days[i] = days[i - 1] + 1;
-                } else {
-                    days[i] = days[maxIndex] + 1;
-                }
+            if (previousPlantData.size() > 0) {
+                days[x] = maxDays + 1;
             }
-            if (plants[i] == minElement[i]) {
-                max = 0;
-            }
-
-            if (days[i] >= max) {
-                maxIndex = i;
-                max = days[i];
-            }
+            previousPlantData.push(x);
         }
 
         Arrays.sort(days);
-        System.out.println(days[days.length - 1]);
+        int max = days[days.length - 1];
+        System.out.println(max);
     }
 }

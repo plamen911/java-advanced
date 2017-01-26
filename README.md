@@ -55,8 +55,6 @@ int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
 
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
 
-- https://judge.softuni.bg/Contests/Practice/Index/187#14 - 15. Poisonous Plants (Stacks and Queues - Exercises 88 / 100)
-
 ### Not submitted
 
 - https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (Stacks and Queues - Exercises)
