@@ -5,35 +5,24 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String[] params = input.nextLine().trim().split("\\s+");
-        int n = Integer.valueOf(params[0]);
-        int m = Integer.valueOf(params[1]);
-        HashSet<Integer> set = new HashSet<>();
-        HashSet<Integer> set2 = new HashSet<>();
+        Scanner scanner  = new Scanner(System.in);
+        int[] setsSize = Arrays.stream(scanner.nextLine().split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .toArray();
 
-        for (int i = 0; i < n; i++) {
-            set.add(input.nextInt());
-        }
-        for (int i = 0; i < m; i++) {
-            set2.add(input.nextInt());
-        }
+        Set<String> set1 = new LinkedHashSet<>();
+        Set<String> set2 = new HashSet<>();
 
-        set.retainAll(set2);
-
-        System.out.printf("%s", join(set, " "));
-    }
-
-    private static String join(Collection<?> s, String delimiter) {
-        StringBuilder builder = new StringBuilder();
-        Iterator<?> iter = s.iterator();
-        while (iter.hasNext()) {
-            builder.append(iter.next());
-            if (!iter.hasNext()) {
-                break;
+        for (int i = 0; i < setsSize[0] + setsSize[1]; i++) {
+            if (i < setsSize[0]) {
+                set1.add(scanner.nextLine());
+            } else {
+                set2.add(scanner.nextLine());
             }
-            builder.append(delimiter);
         }
-        return builder.toString();
+
+        set1.retainAll(set2);
+
+        System.out.println(String.join(" ", set1));
     }
 }

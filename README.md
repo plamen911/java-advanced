@@ -45,6 +45,11 @@ Integer[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
     .map(Integer::parseInt)
     .toArray(Integer[]::new);
 ```
+```
+int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
+    .mapToInt(Integer::parseInt)
+    .toArray();
+```
 
 ### Incomplete points: 
 
