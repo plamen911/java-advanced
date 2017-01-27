@@ -61,8 +61,6 @@ int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
 
 - https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (Stacks and Queues - Exercises)
 
-- https://judge.softuni.bg/Contests/Practice/Index/188#15 - 16. Target Practice (Sets and Maps - Exercise)
-
 - https://judge.softuni.bg/Contests/Practice/Index/188#16 - 17. Lego Blocks (Sets and Maps - Exercise)
 
 ...
