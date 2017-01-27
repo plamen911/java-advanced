@@ -1,3 +1,4 @@
+// https://judge.softuni.bg/Contests/Practice/Index/188#16
 package org.lynxlake.setsAndMapsExercise._17LegoBlocks;
 
 import java.util.ArrayList;
