@@ -51,6 +51,14 @@ int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
     .toArray();
 ```
 
+Sort list
+
+```
+List<String> lines = Files.readAllLines(pathIn);
+// Collections.sort(lines);
+lines.sort(String::compareTo);
+```         
+
 ### Incomplete points: 
 
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
