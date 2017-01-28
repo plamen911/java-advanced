@@ -2,36 +2,27 @@
 package org.lynxlake.filesAndStreamsLab._02WriteToAFile;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
-        String path = "src/org/lynxlake/filesAndStreamsLab/resources/input.txt";
+        String inputPath = "src/org/lynxlake/filesAndStreamsLab/resources/input.txt";
         String outputPath = "src/org/lynxlake/filesAndStreamsLab/resources/output.txt";
-        List<Character> punctuation = new ArrayList<>();
-        punctuation.add(',');
-        punctuation.add('.');
-        punctuation.add('!');
-        punctuation.add('?');
 
-        try (FileInputStream fileStream = new FileInputStream(path)) {
+        HashSet<Character> punctuation = new HashSet<>();
+        Collections.addAll(punctuation, ',', '.', '!', '?');
 
-            FileOutputStream fileOutputStream = new FileOutputStream(outputPath);
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, StandardCharsets.ISO_8859_1);
-            Writer out = new BufferedWriter(outputStreamWriter);
+        try (FileInputStream fis = new FileInputStream(inputPath);
+             FileOutputStream fos = new FileOutputStream(outputPath)) {
 
-            int oneByte = fileStream.read();
+            int oneByte = fis.read();
             while (oneByte >= 0) {
-                if (!punctuation.contains((char)oneByte)) {
-                    out.write(oneByte);
+                if (!punctuation.contains((char) oneByte)) {
+                    fos.write(oneByte);
                 }
-                oneByte = fileStream.read();
+                oneByte = fis.read();
             }
-
-            out.close();
-            fileStream.close();
 
         } catch (IOException e) {
             e.printStackTrace();
