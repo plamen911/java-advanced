@@ -57,7 +57,12 @@ Sort list
 List<String> lines = Files.readAllLines(pathIn);
 // Collections.sort(lines);
 lines.sort(String::compareTo);
-```         
+```
+
+```
+HashSet<Character> punctuation = new HashSet<>();
+Collections.addAll(punctuation, ',', '.', '!', '?');
+```
 
 ### Incomplete points: 
 
