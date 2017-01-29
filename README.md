@@ -67,12 +67,16 @@ Collections.addAll(punctuation, ',', '.', '!', '?');
 ### Incomplete points: 
 
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
+- https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
+- https://judge.softuni.bg/Contests/Practice/Index/386#2 - 03. Decimal To Binary (Stacks and Queues - Lab 80 / 100)
 
 ### Not submitted
 
 - https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (Stacks and Queues - Exercises)
-
 - https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (Stacks and Queues - Exercises)
+
+
+
 
 
 

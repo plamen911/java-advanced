@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#7
-package org.lynxlake.stacksAndQueuesHomework._09RecursiveFibonacci;
+package org.lynxlake.stacksAndQueuesExercises._09RecursiveFibonacci;
 
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#4
-package org.lynxlake.stacksAndQueuesHomework._05CalculateSequenceWithQueue;
+package org.lynxlake.stacksAndQueuesExercises._05CalculateSequenceWithQueue;
 
 import java.io.BufferedReader;
 import java.io.IOException;

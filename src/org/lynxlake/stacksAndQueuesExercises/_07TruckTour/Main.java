@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#6
-package org.lynxlake.stacksAndQueuesHomework._07TruckTour;
+package org.lynxlake.stacksAndQueuesExercises._07TruckTour;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#14
-package org.lynxlake.stacksAndQueuesHomework._15PoisonousPlants;
+package org.lynxlake.stacksAndQueuesExercises._15PoisonousPlants;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

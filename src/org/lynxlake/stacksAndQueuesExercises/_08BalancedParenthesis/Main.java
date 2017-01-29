@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#7
-package org.lynxlake.stacksAndQueuesHomework._08BalancedParenthesis;
+package org.lynxlake.stacksAndQueuesExercises._08BalancedParenthesis;
 
 import java.io.BufferedReader;
 import java.io.IOException;

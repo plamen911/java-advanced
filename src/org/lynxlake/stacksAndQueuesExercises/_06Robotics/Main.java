@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#5
-package org.lynxlake.stacksAndQueuesHomework._06Robotics;
+package org.lynxlake.stacksAndQueuesExercises._06Robotics;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

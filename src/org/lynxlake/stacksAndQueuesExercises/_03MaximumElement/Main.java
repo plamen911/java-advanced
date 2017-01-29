@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#2
-package org.lynxlake.stacksAndQueuesHomework._03MaximumElement;
+package org.lynxlake.stacksAndQueuesExercises._03MaximumElement;
 
 import java.io.BufferedReader;
 import java.io.IOException;

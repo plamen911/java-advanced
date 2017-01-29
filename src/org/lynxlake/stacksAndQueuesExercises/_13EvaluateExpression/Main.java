@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#12
-package org.lynxlake.stacksAndQueuesHomework._13EvaluateExpression;
+package org.lynxlake.stacksAndQueuesExercises._13EvaluateExpression;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -20,7 +20,7 @@ public class Main {
         expression = infixExpression;
     }
 
-    public String infixToPostfix() {
+    private String infixToPostfix() {
         String postfixString = "";
 
         for (int index = 0; index < expression.length(); ++index) {
@@ -32,7 +32,7 @@ public class Main {
 
                 while (!(oper.equals('(')) && !(stack.isEmpty())) {
                     stack.pop();
-                    postfixString += oper.charValue();
+                    postfixString += oper;
                     if (!stack.isEmpty()) // Code Added
                         oper = stack.peek(); // Code Added
                 }
@@ -44,7 +44,7 @@ public class Main {
                     Character oper = stack.peek();
                     while (!(stack.isEmpty() || oper.equals(('(')) || oper.equals((')')))) {
                         oper = stack.pop(); // Code Updated
-                        postfixString += oper.charValue();
+                        postfixString += oper;
                     }
                     stack.push(value);
                 }
@@ -56,7 +56,7 @@ public class Main {
                     // while condition updated
                     while (!oper.equals(('(')) && !oper.equals(('+')) && !oper.equals(('-')) && !stack.isEmpty()) {
                         oper = stack.pop(); // Code Updated
-                        postfixString += oper.charValue();
+                        postfixString += oper;
                     }
                     stack.push(value);
                 }
@@ -69,7 +69,7 @@ public class Main {
             Character oper = stack.peek();
             if (!oper.equals(('('))) {
                 stack.pop();
-                postfixString += oper.charValue();
+                postfixString += oper;
             }
         }
         return postfixString;
