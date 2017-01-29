@@ -64,6 +64,25 @@ HashSet<Character> punctuation = new HashSet<>();
 Collections.addAll(punctuation, ',', '.', '!', '?');
 ```
 
+```
+private static boolean isPrime(int digit) {
+    boolean prime = true;
+        
+    if (digit < 2) {
+        prime = false;
+    }
+
+    for (int i = 2; i <= Math.sqrt(digit); i++) {
+        if (digit % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    return prime;
+}
+```
+
 ### Incomplete points: 
 
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
