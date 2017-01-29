@@ -87,6 +87,11 @@ private static boolean isPrime(int digit) {
 ArrayList<String> numbers = new ArrayList<>(Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
 ```
 
+```
+private static final String PROJECT_PATH = System.getProperty("user.dir") + "/src/resources/";
+```
+
+
 ### Incomplete points: 
 
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
