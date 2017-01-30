@@ -94,17 +94,14 @@ private static final String PROJECT_PATH = System.getProperty("user.dir") + "/sr
 
 ### Incomplete points: 
 
-- https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
-- https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (Multidimensional Arrays - Exercises 80 / 100) 
+Multidimensional Arrays - Exercises
+- https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (80 / 100) 
 
 Stacks and Queues
 - https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (0 / 0)
 - https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (60 / 100)
 
-### Not submitted
 
-- https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (Stacks and Queues - Exercises)
-- https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (Stacks and Queues - Exercises)
 
 
 
