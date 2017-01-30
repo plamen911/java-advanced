@@ -9,6 +9,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int decimal = Integer.valueOf(scanner.nextLine());
 
+        if (decimal == 0) {
+            System.out.println(0);
+            return;
+        }
+
         ArrayDeque<Integer> stack = new ArrayDeque<>();
 
         while (decimal != 0) {
