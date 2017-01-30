@@ -99,7 +99,7 @@ Multidimensional Arrays - Exercises
 
 Stacks and Queues
 - https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (0 / 0)
-- https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (60 / 100)
+- https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (80 / 100)
 
 
 

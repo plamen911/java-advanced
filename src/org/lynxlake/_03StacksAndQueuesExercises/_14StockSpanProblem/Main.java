@@ -1,21 +1,23 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#13
 package org.lynxlake._03StacksAndQueuesExercises._14StockSpanProblem;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = Integer.parseInt(scanner.nextLine());
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(reader.readLine());
         ArrayList<Integer> result = new ArrayList<>();
         ArrayDeque<Double> stack = new ArrayDeque<>();
         ArrayDeque<Double> temp = new ArrayDeque<>();
         int counter = 1;
 
         for (int i = 0; i < n; i++) {
-            double num = Double.parseDouble(scanner.nextLine());
+            double num = Double.parseDouble(reader.readLine());
             if (stack.isEmpty()) {
                 stack.push(num);
                 result.add(1);
