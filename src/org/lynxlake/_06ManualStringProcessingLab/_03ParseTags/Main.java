@@ -9,17 +9,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String input = reader.readLine().trim();
+        String openTag = "<upcase>";
+        String closeTag = "</upcase>";
 
         while (true) {
-            int startIndex = input.indexOf("<upcase>");
-            int endIndex = input.indexOf("</upcase>");
+            int startIndex = input.indexOf(openTag);
+            int endIndex = input.indexOf(closeTag);
 
             if (startIndex == -1 || endIndex == -1) {
                 break;
             }
 
-            String text = input.substring(startIndex + 8, endIndex);
-            input = input.replace(String.format("<upcase>%s</upcase>", text), text.toUpperCase());
+            String text = input.substring(startIndex + openTag.length(), endIndex);
+            input = input.replace(String.format("%s%s%s", openTag, text, closeTag), text.toUpperCase());
         }
 
         System.out.printf("%s%n", input);
