@@ -15,11 +15,12 @@ public class Main {
 
         HashMap<String, Integer> result = new HashMap<>();
         for (String specialWord : specialWords) {
+            result.put(specialWord, 0);
+        }
+
+        for (String specialWord : specialWords) {
             for (String s : text) {
                 if (specialWord.compareToIgnoreCase(s) == 0) {
-                    if (!result.containsKey(specialWord)) {
-                        result.put(specialWord, 0);
-                    }
                     result.put(specialWord, result.get(specialWord) + 1);
                 }
             }
