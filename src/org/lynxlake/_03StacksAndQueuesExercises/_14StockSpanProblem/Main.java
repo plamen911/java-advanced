@@ -5,45 +5,33 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
-import java.util.ArrayList;
+import java.util.Deque;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(reader.readLine());
-        ArrayList<Integer> result = new ArrayList<>();
-        ArrayDeque<Double> stack = new ArrayDeque<>();
-        ArrayDeque<Double> temp = new ArrayDeque<>();
-        int counter = 1;
+        int number = Integer.parseInt(reader.readLine());
+        int[] stock = new int[number];
+        for (int i = 0; i < stock.length; i++) {
+            stock[i] = Integer.parseInt(reader.readLine());
+        }
 
-        for (int i = 0; i < n; i++) {
-            double num = Double.parseDouble(reader.readLine());
-            if (stack.isEmpty()) {
-                stack.push(num);
-                result.add(1);
-            } else {
-                if (num < stack.peek()) {
-                    stack.push(num);
-                    result.add(1);
-                } else {
-                    counter = 1;
-                    temp.clear();
-                    temp.addAll(stack);
-                    while (!temp.isEmpty()) {
-                        if (temp.pop() <= num) {
-                            counter++;
-                        } else {
-                            break;
-                        }
-                    }
-                    result.add(counter);
-                    stack.push(num);
-                }
+        Deque<Integer> st = new ArrayDeque<>();
+        st.push(0);
+        StringBuilder builder = new StringBuilder();
+        builder.append(1).append("\n");
+        for (int i = 1; i < number; i++) {
+            while (!st.isEmpty() && stock[st.peek()] <= stock[i]) {
+                st.pop();
             }
+            if (!st.isEmpty()) {
+                builder.append(i - st.peek()).append("\n");
+            } else {
+                builder.append(i + 1).append("\n");
+            }
+            st.push(i);
         }
 
-        for (Integer integer : result) {
-            System.out.println(integer);
-        }
+        System.out.println(builder.toString());
     }
 }

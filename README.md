@@ -97,9 +97,6 @@ private static final String PROJECT_PATH = System.getProperty("user.dir") + "/sr
 Multidimensional Arrays - Exercises
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (80 / 100) 
 
-Stacks and Queues
-- https://judge.softuni.bg/Contests/Practice/Index/187#12 - 13. Evaluate Expression (0 / 0)
-- https://judge.softuni.bg/Contests/Practice/Index/187#13 - 14. Stock Span Problem (80 / 100)
 
 
 
