@@ -1,77 +1,79 @@
 // https://judge.softuni.bg/Contests/Practice/Index/187#12
 package org.lynxlake._03StacksAndQueuesExercises._13EvaluateExpression;
 
+import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Main {
-    static private String expression;
-    private Stack<Character> stack = new Stack<Character>();
-
     public static void main(String[] args) {
-        System.out.println("Type an expression written in Infix notation: ");
-        Scanner input = new Scanner(System.in);
-        String expression = input.next();
-        Main convert = new Main(expression);
-        System.out.println("This expression writtien in Postfix notation is: \n" + convert.infixToPostfix());
-    }
+        Scanner scan = new Scanner(System.in);
+        String[] input = scan.nextLine().split("\\s+");
+        ArrayDeque<String> operators = new ArrayDeque<>();
+        ArrayDeque<String> expression = new ArrayDeque<>();
+        Map<String, Integer> priorities = new HashMap<>();
+        priorities.put("*", 3);
+        priorities.put("/", 3);
+        priorities.put("+", 2);
+        priorities.put("-", 2);
+        priorities.put("(", 1);
 
-    public Main(String infixExpression) {
-        expression = infixExpression;
-    }
-
-    private String infixToPostfix() {
-        String postfixString = "";
-
-        for (int index = 0; index < expression.length(); ++index) {
-            char value = expression.charAt(index);
-            if (value == '(') {
-                stack.push('('); // Code Added
-            } else if (value == ')') {
-                Character oper = stack.peek();
-
-                while (!(oper.equals('(')) && !(stack.isEmpty())) {
-                    stack.pop();
-                    postfixString += oper;
-                    if (!stack.isEmpty()) // Code Added
-                        oper = stack.peek(); // Code Added
+        for (String anInput : input) {
+            try {
+                double num = Double.parseDouble(anInput);
+                expression.addLast(anInput);
+            } catch (Exception e) {
+                switch (anInput) {
+                    case "(":
+                        operators.push(anInput);
+                        break;
+                    case ")":
+                        String symbol = operators.pop();
+                        while (!symbol.equals("(")) {
+                            expression.addLast(symbol);
+                            symbol = operators.pop();
+                        }
+                        break;
+                    default:
+                        while (!operators.isEmpty() && priorities.get(operators.peek()) >= priorities.get(anInput)) {
+                            expression.addLast(operators.pop());
+                        }
+                        operators.push(anInput);
+                        break;
                 }
-                stack.pop(); // Code Added
-            } else if (value == '+' || value == '-') {
-                if (stack.isEmpty()) {
-                    stack.push(value);
-                } else {
-                    Character oper = stack.peek();
-                    while (!(stack.isEmpty() || oper.equals(('(')) || oper.equals((')')))) {
-                        oper = stack.pop(); // Code Updated
-                        postfixString += oper;
-                    }
-                    stack.push(value);
-                }
-            } else if (value == '*' || value == '/') {
-                if (stack.isEmpty()) {
-                    stack.push(value);
-                } else {
-                    Character oper = stack.peek();
-                    // while condition updated
-                    while (!oper.equals(('(')) && !oper.equals(('+')) && !oper.equals(('-')) && !stack.isEmpty()) {
-                        oper = stack.pop(); // Code Updated
-                        postfixString += oper;
-                    }
-                    stack.push(value);
-                }
-            } else {
-                postfixString += value;
             }
         }
+        while (!operators.isEmpty()) {
+            expression.addLast(operators.pop());
+        }
 
-        while (!stack.isEmpty()) {
-            Character oper = stack.peek();
-            if (!oper.equals(('('))) {
-                stack.pop();
-                postfixString += oper;
+        while (expression.size() >= 1) {
+            String token = expression.pop();
+            try {
+                double a = Double.parseDouble(token);
+                operators.push(token);
+            } catch (Exception e) {
+                String operand1 = operators.pop();
+                String operand2 = operators.pop();
+                String result = doMath(token, operand1, operand2);
+                operators.push(result);
             }
         }
-        return postfixString;
+        System.out.printf("%.2f", Double.parseDouble(operators.peek()));
+    }
+
+    private static String doMath(String token, String operand1, String operand2) {
+        switch (token) {
+            case "*":
+                return Double.toString(Double.parseDouble(operand1) * Double.parseDouble(operand2));
+            case "/":
+                return Double.toString(Math.max(Double.parseDouble(operand2), Double.parseDouble(operand2)) /
+                        Math.min(Double.parseDouble(operand1), Double.parseDouble(operand2)));
+            case "+":
+                return Double.toString(Double.parseDouble(operand1) + Double.parseDouble(operand2));
+            default:
+                return Double.toString((Double.parseDouble(operand2) - Double.parseDouble(operand1)));
+        }
     }
 }
