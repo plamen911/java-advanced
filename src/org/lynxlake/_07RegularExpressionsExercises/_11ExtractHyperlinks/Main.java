@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#7
-package org.lynxlake._07RegularExpressionsExercises.extractHyperlinks;
+package org.lynxlake._07RegularExpressionsExercises._11ExtractHyperlinks;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
