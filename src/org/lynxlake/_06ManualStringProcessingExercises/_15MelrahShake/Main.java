@@ -1,3 +1,4 @@
+// https://judge.softuni.bg/Contests/Practice/Index/195#14
 package org.lynxlake._06ManualStringProcessingExercises._15MelrahShake;
 
 import java.io.BufferedReader;
