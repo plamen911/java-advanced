@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#4
-package org.lynxlake._07RegularExpressionsExercises.extractEmail;
+package org.lynxlake._07RegularExpressionsExercises._05ExtractEmails;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         // String regex = "([A-Za-z0-9][\\.\\-_]?[A-Za-z0-9]+[\\.\\-_]?[A-Za-z0-9]+@[A-Za-z][A-Za-z0-9]+[\\-\\.]?[A-Za-z0-9]+\\.[A-Za-z]{2,4}\\b)";
-        String regex = "((?<=\\s)|^)([a-z0-9][a-z0-9\\-._]*[a-z0-9])@([a-z0-9][a-z0-9\\-]*[a-z0-9]\\.)+[a-z0-9]+";
+        // String regex = "((?<=\\s)|^)([a-z0-9][a-z0-9\\-._]*[a-z0-9])@([a-z0-9][a-z0-9\\-]*[a-z0-9]\\.)+[a-z0-9]+";
+        String regex = "(^| )[0-9a-zA-Z]+(\\.|-|_)?[0-9a-zA-Z]+@[a-zA-Z]+-?([a-zA-Z]+)?\\.[a-zA-Z]+(\\.[a-zA-Z]+)?(?=,| |.|$)";
 
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
