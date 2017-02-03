@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#5
-package org.lynxlake._07RegularExpressionsExercises.sentenceExtractor;
+package org.lynxlake._07RegularExpressionsExercises._06SentenceExtractor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
