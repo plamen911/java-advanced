@@ -98,6 +98,10 @@ List<String> words = Arrays.stream(reader.readLine().split("[\\s,\\.\\?\\!]"))
     .collect(Collectors.toList());
 ```
 
+```
+TreeSet<String> palindromes = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
+```
+
 ### Incomplete points: 
 
 Multidimensional Arrays - Exercises
