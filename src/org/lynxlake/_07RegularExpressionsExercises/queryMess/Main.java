@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#8
-package org.lynxlake.regularExpressions.queryMess;
+package org.lynxlake._07RegularExpressionsExercises.queryMess;
 
 import java.util.*;
 import java.util.regex.Matcher;

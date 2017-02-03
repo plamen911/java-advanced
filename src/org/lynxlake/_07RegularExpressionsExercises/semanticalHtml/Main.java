@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#10
-package org.lynxlake.regularExpressions.semanticalHtml;
+package org.lynxlake._07RegularExpressionsExercises.semanticalHtml;
 
 import java.io.BufferedReader;
 import java.io.IOException;

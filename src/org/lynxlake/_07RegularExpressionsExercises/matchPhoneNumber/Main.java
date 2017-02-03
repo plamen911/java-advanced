@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#1
-package org.lynxlake.regularExpressions.matchPhoneNumber;
+package org.lynxlake._07RegularExpressionsExercises.matchPhoneNumber;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

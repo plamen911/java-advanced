@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#9
-package org.lynxlake.regularExpressions.useYourChainsBuddy;
+package org.lynxlake._07RegularExpressionsExercises.useYourChainsBuddy;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

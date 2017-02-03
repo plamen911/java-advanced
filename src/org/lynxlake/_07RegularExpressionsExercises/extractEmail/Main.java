@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#4
-package org.lynxlake.regularExpressions.extractEmail;
+package org.lynxlake._07RegularExpressionsExercises.extractEmail;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

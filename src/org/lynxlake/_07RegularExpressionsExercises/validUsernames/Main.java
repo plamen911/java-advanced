@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#6
-package org.lynxlake.regularExpressions.validUsernames;
+package org.lynxlake._07RegularExpressionsExercises.validUsernames;
 
 import java.util.ArrayList;
 import java.util.Scanner;

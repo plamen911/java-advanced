@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#3
-package org.lynxlake.regularExpressions.replaceTag;
+package org.lynxlake._07RegularExpressionsExercises.replaceTag;
 
 import java.io.BufferedReader;
 import java.io.IOException;
