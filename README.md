@@ -91,6 +91,12 @@ ArrayList<String> numbers = new ArrayList<>(Arrays.asList("0", "1", "2", "3", "4
 private static final String PROJECT_PATH = System.getProperty("user.dir") + "/src/resources/";
 ```
 
+Split string and remove empty entries
+```
+List<String> words = Arrays.stream(reader.readLine().split("[\\s,\\.\\?\\!]"))
+    .filter(item -> item != null && !"".equals(item))
+    .collect(Collectors.toList());
+```
 
 ### Incomplete points: 
 
