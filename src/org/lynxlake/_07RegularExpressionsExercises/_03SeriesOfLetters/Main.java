@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/189#2
-package org.lynxlake._07RegularExpressionsExercises.seriesOfLetters;
+package org.lynxlake._07RegularExpressionsExercises._03SeriesOfLetters;
 
 import java.io.BufferedReader;
 import java.io.IOException;
