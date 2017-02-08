@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._06WordCount;
+package org.lynxlake._05FilesAndStreamsExercises._06WordCount;
 
 import java.io.*;
 import java.util.*;

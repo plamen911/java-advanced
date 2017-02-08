@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._07MergeTwoFiles;
+package org.lynxlake._05FilesAndStreamsExercises._07MergeTwoFiles;
 
 import java.io.*;
 import java.util.ArrayList;

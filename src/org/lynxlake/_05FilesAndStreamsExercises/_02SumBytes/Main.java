@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._02SumBytes;
+package org.lynxlake._05FilesAndStreamsExercises._02SumBytes;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

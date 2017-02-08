@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._01SumLines;
+package org.lynxlake._05FilesAndStreamsExercises._01SumLines;
 
 import java.io.*;
 import java.nio.file.Files;

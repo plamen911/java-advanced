@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._04CountCharacterTypes;
+package org.lynxlake._05FilesAndStreamsExercises._04CountCharacterTypes;
 
 import java.io.*;
 import java.util.Collections;

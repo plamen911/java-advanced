@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._08GetFolderSize;
+package org.lynxlake._05FilesAndStreamsExercises._08GetFolderSize;
 
 import java.io.File;
 import java.util.ArrayDeque;

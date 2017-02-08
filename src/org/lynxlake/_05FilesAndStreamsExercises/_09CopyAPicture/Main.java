@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._09CopyAPicture;
+package org.lynxlake._05FilesAndStreamsExercises._09CopyAPicture;
 
 import java.io.*;
 

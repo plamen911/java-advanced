@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/194#0
-package org.lynxlake.functionalProgramming.consumerPrint;
+package org.lynxlake._08FunctionalProgrammingExercises._01ConsumerPrint;
 
 import java.util.Scanner;
 import java.util.function.Consumer;

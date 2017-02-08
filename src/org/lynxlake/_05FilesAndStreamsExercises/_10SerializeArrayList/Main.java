@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._10SerializeArrayList;
+package org.lynxlake._05FilesAndStreamsExercises._10SerializeArrayList;
 
 import java.io.*;
 import java.util.ArrayList;

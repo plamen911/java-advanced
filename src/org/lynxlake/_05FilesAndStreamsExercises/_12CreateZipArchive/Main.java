@@ -1,4 +1,4 @@
-package org.lynxlake._05FilesAndStreamsExcercises._12CreateZipArchive;
+package org.lynxlake._05FilesAndStreamsExercises._12CreateZipArchive;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

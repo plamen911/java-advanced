@@ -1,9 +1,6 @@
-package org.lynxlake._05FilesAndStreamsExcercises._11SerializeCustomObject;
+package org.lynxlake._05FilesAndStreamsExercises._11SerializeCustomObject;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Main {
     private static final String PROJECT_PATH = System.getProperty("user.dir") + "/src/resources/";
