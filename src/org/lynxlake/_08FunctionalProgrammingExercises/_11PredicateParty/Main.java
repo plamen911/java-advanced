@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/194#10
-package org.lynxlake._08FunctionalProgramingLab._11PredicateParty;
+package org.lynxlake._08FunctionalProgrammingExercises._11PredicateParty;
 
 import java.io.BufferedReader;
 import java.io.IOException;
