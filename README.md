@@ -53,6 +53,13 @@ int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
     .toArray();
 ```
 
+List to array
+```
+List<String> result = new ArrayList<>();
+// ...
+String[] names = result.toArray(new String[result.size()]);
+```
+
 Sort list
 
 ```
