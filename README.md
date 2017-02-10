@@ -114,6 +114,9 @@ List<Character> alphabet = Arrays.asList(letters);
 Multidimensional Arrays - Exercises
 - https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (80 / 100) 
 
+Functional Programming - Exercises
+- https://judge.softuni.bg/Contests/Practice/Index/194#4 - 05. Applied Arithmetics (80 / 100)
+
 
 
 
