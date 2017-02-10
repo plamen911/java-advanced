@@ -37,19 +37,9 @@ public class Main {
         }
 
         desertRoses.entrySet().stream().sorted((e1, e2) -> {
-
-            long roseAmount1 = e1.getValue().values().stream().mapToLong(Number::longValue).sum();
-            long roseAmount2 = e2.getValue().values().stream().mapToLong(Number::longValue).sum();
-
-            int c = 0;
-            if (roseAmount1 > roseAmount2) {
-                c = -1;
-            } else if (roseAmount1 < roseAmount2) {
-                c = 1;
-            }
-
-            return c;
-
+            long sum1 = e1.getValue().values().stream().mapToLong(Number::longValue).sum();
+            long sum2 = e2.getValue().values().stream().mapToLong(Number::longValue).sum();
+            return Long.compare(sum2, sum1);
         }).forEach(item -> {
             System.out.println(item.getKey());
             item.getValue().entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue)).forEach(e -> {
