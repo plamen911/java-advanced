@@ -5,50 +5,30 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Function<String, Function<Integer, Integer>> checkInput = input -> {
-            switch (input) {
-                case "add":
-                    return a -> a = a + 1;
-                case "multiply":
-                    return a -> a = a * 2;
-                case "subtract":
-                    return a -> a = a - 1;
-                default:
-                    return null;
-            }
-        };
-
-        int[] numbers;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            numbers = Arrays.stream(reader.readLine().split(" "))
-                    .map(String::trim)
-                    .mapToInt(Integer::parseInt)
-                    .toArray();
+        int[] numberArray = Arrays.stream(reader.readLine().split("\\s+"))
+                .mapToInt(Integer::parseInt).toArray();
 
-            while (true) {
-                String input = reader.readLine();
-                if (input.equals("end")) break;
-                if (input.equals("print")) continue;
-
-                if (checkInput.apply(input) != null) {
-                    Function<Integer, Integer> action = checkInput.apply(input);
-
-                    for (int i = 0; i < numbers.length; i++) {
-                        int number = numbers[i];
-                        numbers[i] = action.apply(number);
-                    }
-                }
+        String command = "";
+        while (!(command = reader.readLine()).equals("end")) {
+            switch (command) {
+                case "add":
+                    numberArray = Arrays.stream(numberArray).map(i -> i + 1).toArray();
+                    break;
+                case "subtract":
+                    numberArray = Arrays.stream(numberArray).map(i -> i - 1).toArray();
+                    break;
+                case "multiply":
+                    numberArray = Arrays.stream(numberArray).map(i -> i * 2).toArray();
+                    break;
+                case "print":
+                    Arrays.stream(numberArray).forEach(i -> System.out.print(i + " "));
+                    System.out.println();
+                    break;
             }
-
-            Arrays.stream(numbers).forEach(a -> System.out.print(a + " "));
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
