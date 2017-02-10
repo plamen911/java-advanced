@@ -23,15 +23,15 @@ public class Main {
         };
 
         int[] numbers;
-        BufferedReader Console = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            numbers = Arrays.stream(Console.readLine().split(" "))
+            numbers = Arrays.stream(reader.readLine().split(" "))
                     .map(String::trim)
                     .mapToInt(Integer::parseInt)
                     .toArray();
 
             while (true) {
-                String input = Console.readLine();
+                String input = reader.readLine();
                 if (input.equals("end")) break;
                 if (input.equals("print")) continue;
 
