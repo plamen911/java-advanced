@@ -116,6 +116,13 @@ Character[] letters = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k
 List<Character> alphabet = Arrays.asList(letters);
 ```
 
+Join array of numbers with space
+
+```
+String[] result = Arrays.toString(numbers).split("[\\[\\]]")[1].split(", ");
+System.out.println(String.join(" ", result));
+```
+
 ### Incomplete points: 
 
 Multidimensional Arrays - Exercises
