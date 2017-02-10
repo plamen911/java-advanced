@@ -101,10 +101,18 @@ private static final String PROJECT_PATH = System.getProperty("user.dir") + "/sr
 ```
 
 Split string and remove empty entries
+
 ```
 List<String> words = Arrays.stream(reader.readLine().split("[\\s,\\.\\?\\!]"))
     .filter(item -> item != null && !"".equals(item))
     .collect(Collectors.toList());
+```
+
+```
+ArrayList<Integer> divisors = Arrays.stream(reader.readLine().split("\\s+"))
+    .map(String::trim)
+    .map(Integer::parseInt)
+    .collect(Collectors.toCollection(ArrayList::new));
 ```
 
 ```
