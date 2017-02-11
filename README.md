@@ -136,6 +136,10 @@ String[] result = Arrays.toString(numbers).split("[\\[\\]]")[1].split(", ");
 System.out.println(String.join(" ", result));
 ```
 
+```
+System.out.printf("%s%n", String.join(" ", s.getGrades().stream().map(String::valueOf).collect(Collectors.toList())));
+```
+
 ### Incomplete points: 
 
 Multidimensional Arrays - Exercises
