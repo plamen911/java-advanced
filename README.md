@@ -52,6 +52,11 @@ int[] params = Arrays.stream(scanner.nextLine().split("\\s+"))
     .mapToInt(Integer::parseInt)
     .toArray();
 ```
+```
+List<Integer> params = Stream.of(reader.readLine().split("\\s+"))
+    .map(Integer::valueOf)
+    .collect(Collectors.toList());
+```
 
 List to array
 ```

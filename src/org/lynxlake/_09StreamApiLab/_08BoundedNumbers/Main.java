@@ -7,15 +7,18 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] bounds = Arrays.stream(reader.readLine().split("\\s+"))
-                .mapToInt(Integer::valueOf)
-                .toArray();
-        int lowerBound = Math.min(bounds[0], bounds[1]);
-        int upperBound = Math.max(bounds[0], bounds[1]);
+
+        List<Integer> bounds = Stream.of(reader.readLine().split("\\s+"))
+                .map(Integer::valueOf)
+                .collect(Collectors.toList());
+
+        int lowerBound = Math.min(bounds.get(0), bounds.get(1));
+        int upperBound = Math.max(bounds.get(0), bounds.get(1));
 
         List<Integer> numbers = Arrays.stream(reader.readLine().split("\\s+"))
                 .filter(a -> !a.isEmpty())
