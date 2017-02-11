@@ -10,18 +10,16 @@ import java.util.OptionalDouble;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            OptionalDouble average = Arrays.stream(reader.readLine().split("\\s+"))
-                    .mapToDouble(Double::parseDouble)
-                    .average();
 
-            if (average.isPresent()) {
-                System.out.printf("%.2f", average.getAsDouble());
-            } else {
-                System.out.println("No match");
-            }
+        OptionalDouble average = Arrays.stream(reader.readLine().split("\\s+"))
+                // .filter(item -> item != null && !"".equals(item))
+                .filter(item -> !item.isEmpty())
+                .mapToDouble(Double::parseDouble)
+                .average();
 
-        } catch (Exception ignored) {
+        if (average.isPresent()) {
+            System.out.printf("%.2f", average.getAsDouble());
+        } else {
             System.out.println("No match");
         }
     }
