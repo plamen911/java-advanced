@@ -5,24 +5,27 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> names = Arrays.stream(reader.readLine().split("\\s+"))
-                .collect(Collectors.toCollection(ArrayList::new));
+        List<String> names = Arrays.asList(reader.readLine().split("\\s+"));
 
-        HashSet<String> letters = Arrays.stream(reader.readLine().split("\\s+"))
-                .map(String::toLowerCase)
-                .collect(Collectors.toCollection(HashSet::new));
+        HashSet<Character> chars = new HashSet<>();
 
-        Optional<String> name = Optional.ofNullable(names.stream()
-                .filter(a -> letters.contains((a.charAt(0) + "").toLowerCase()))
-                .sorted(Comparator.naturalOrder())
-                .findFirst()
-                .orElse(null));
+        Arrays.stream(reader.readLine().split("\\s+"))
+                .map(a -> a.toLowerCase().charAt(0))
+                .forEach(chars::add);
 
-        System.out.println(name == null ? "No match" : name.orElse("No match"));
+        Optional<String> firstName = names.stream()
+                .filter(n -> chars.contains(n.toLowerCase().charAt(0)))
+                .sorted()
+                .findFirst();
+
+        if (firstName.isPresent()) {
+            System.out.println(firstName.get());
+        } else {
+            System.out.println("No match");
+        }
     }
 }
