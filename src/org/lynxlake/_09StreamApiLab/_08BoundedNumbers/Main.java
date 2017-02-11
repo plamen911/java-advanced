@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,10 +17,14 @@ public class Main {
         int lowerBound = Math.min(bounds[0], bounds[1]);
         int upperBound = Math.max(bounds[0], bounds[1]);
 
-        Arrays.stream(reader.readLine().split("\\s+"))
+        List<Integer> numbers = Arrays.stream(reader.readLine().split("\\s+"))
                 .filter(a -> !a.isEmpty())
-                .mapToInt(Integer::valueOf)
+                .map(Integer::valueOf)
                 .filter(n -> lowerBound <= n && n <= upperBound)
-                .forEach(e -> System.out.print(e + " "));
+                .collect(Collectors.toList());
+
+        for (Integer number : numbers) {
+            System.out.print(number + " ");
+        }
     }
 }
