@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/92#1
-package org.lynxlake.advancedCSharpExam19July2015._02ArraySlider;
+package org.lynxlake.exams.advancedCSharpExam19July2015._02ArraySlider;
 
 import java.io.BufferedReader;
 import java.io.IOException;

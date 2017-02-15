@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/92#3
-package org.lynxlake.advancedCSharpExam19July2015._04PopulationCounter;
+package org.lynxlake.exams.advancedCSharpExam19July2015._04PopulationCounter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

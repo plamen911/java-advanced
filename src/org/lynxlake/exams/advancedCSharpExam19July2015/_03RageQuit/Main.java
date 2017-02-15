@@ -1,10 +1,9 @@
 // https://judge.softuni.bg/Contests/Practice/Index/92#2
-package org.lynxlake.advancedCSharpExam19July2015._03RageQuit;
+package org.lynxlake.exams.advancedCSharpExam19July2015._03RageQuit;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

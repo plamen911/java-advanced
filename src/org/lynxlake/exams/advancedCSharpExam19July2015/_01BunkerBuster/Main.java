@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/92#0
-package org.lynxlake.advancedCSharpExam19July2015._01BunkerBuster;
+package org.lynxlake.exams.advancedCSharpExam19July2015._01BunkerBuster;
 
 import java.io.BufferedReader;
 import java.io.IOException;

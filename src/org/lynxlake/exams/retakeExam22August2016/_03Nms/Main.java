@@ -1,5 +1,5 @@
 // https://judge.softuni.bg/Contests/Practice/Index/276#2
-package org.lynxlake.retakeExam22August2016._03Nms;
+package org.lynxlake.exams.retakeExam22August2016._03Nms;
 
 import java.io.BufferedReader;
 import java.io.IOException;

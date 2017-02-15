@@ -1,13 +1,9 @@
 // https://judge.softuni.bg/Contests/Practice/Index/276#1
-package org.lynxlake.retakeExam22August2016._02NaturesProphet;
+package org.lynxlake.exams.retakeExam22August2016._02NaturesProphet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws IOException {
