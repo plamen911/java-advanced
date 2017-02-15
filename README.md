@@ -140,6 +140,13 @@ System.out.println(String.join(" ", result));
 System.out.printf("%s%n", String.join(" ", s.getGrades().stream().map(String::valueOf).collect(Collectors.toList())));
 ```
 
+Count unique characters in string
+
+```
+List<Character> chars = sb.toString().chars().mapToObj(e->(char)e).collect(Collectors.toList());
+long count = chars.stream().distinct().count();
+```
+
 ### Incomplete points: 
 
 Multidimensional Arrays - Exercises
