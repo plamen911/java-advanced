@@ -147,10 +147,16 @@ List<Character> chars = sb.toString().chars().mapToObj(e->(char)e).collect(Colle
 long count = chars.stream().distinct().count();
 ```
 
-### Incomplete points: 
+Sort and reverse part of list
 
-Multidimensional Arrays - Exercises
-- https://judge.softuni.bg/Contests/Practice/Index/387#10 - 12. StringMatrixRotationTests (80 / 100) 
+```
+ArrayList<String> inputList = Arrays.stream(reader.readLine().split("\\s+"))
+    .map(String::trim)
+    .map(String::valueOf)
+    .collect(Collectors.toCollection(ArrayList::new));
+Collections.sort(inputList.subList(startIndex, endIndex), Collator.getInstance(Locale.ENGLISH));
+Collections.reverse(inputList.subList(startIndex, endIndex));
+```
 
 
 
