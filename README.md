@@ -150,12 +150,30 @@ long count = chars.stream().distinct().count();
 Sort and reverse part of list
 
 ```
+/*
 ArrayList<String> inputList = Arrays.stream(reader.readLine().split("\\s+"))
     .map(String::trim)
     .map(String::valueOf)
     .collect(Collectors.toCollection(ArrayList::new));
+*/
+// OR...
+
+ArrayList<String> inputList = new ArrayList<>(Arrays.asList(reader.readLine().split("\\s+")));
+    
 Collections.sort(inputList.subList(startIndex, endIndex), Collator.getInstance(Locale.ENGLISH));
 Collections.reverse(inputList.subList(startIndex, endIndex));
+```
+
+```
+// formula for points inside circle
+private static boolean isInsideCircle(int x, int y, int cCentX, int cCentY, int radius) {
+    return Math.pow((x - cCentX), 2) + Math.pow((y - cCentY), 2) <= Math.pow(radius, 2);
+}
+
+// formula for points inside horizontal rectangle
+private static boolean isInsideRectangle(int x, int y, int rLeft, int rWidth, int rTop, int rHeight) {
+    return (x >= rLeft) && (x <= (rLeft + rWidth)) && (y <= rTop) && (y >= (rTop - rHeight));
+}
 ```
 
 
