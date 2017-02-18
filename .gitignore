@@ -4,3 +4,4 @@ out
 Java-Advanced-Exercises.iml
 .DS_Store
 src/org/lynxlake/Test.java
+src/org/lynxlake/tests/
