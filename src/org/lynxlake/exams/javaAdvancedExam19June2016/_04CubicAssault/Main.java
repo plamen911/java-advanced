@@ -4,8 +4,6 @@ package org.lynxlake.exams.javaAdvancedExam19June2016._04CubicAssault;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Comparator;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
