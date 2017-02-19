@@ -28,7 +28,8 @@ public class Main {
             line = line.replaceAll(s, foundPatterns.get(s));
         }
 
-        final String regex = "(_|,)([A-Z-a-z]+)(\\d)";
+        // final String regex = "(_|,)([A-Z-a-z]+)(\\d)"; -- 90/100
+        final String regex = "(_|,)([a-zA-Z]+)([\\d])";
         final Pattern pattern = Pattern.compile(regex);
         final Matcher matcher = pattern.matcher(line);
 
@@ -38,17 +39,14 @@ public class Main {
             String op = matcher.group(1);
             String encodedString = op + message + digit;
 
-            char[] chars = message.toCharArray();
             StringBuilder sb = new StringBuilder();
             if (op.equals(",")) {
-                for (char aChar : chars) {
-                    char ch = (char) (aChar + digit);
-                    sb.append(ch);
+                for (int i = 0; i < message.length(); i++) {
+                    sb.append((char)(message.charAt(i) + digit));
                 }
             } else {
-                for (char aChar : chars) {
-                    char ch = (char) (aChar - digit);
-                    sb.append(ch);
+                for (int i = 0; i < message.length(); i++) {
+                    sb.append((char)(message.charAt(i) - digit));
                 }
             }
 
