@@ -40,18 +40,24 @@ public class Main3 {
         for (LinkedList<Integer> activity : activities) {
             if (activity.size() == 1) {
                 maxWaveList.add(activity.get(0));
-            } else if (activity.size() > 1){
+            } else if (activity.size() > 1) {
                 int first = activity.get(0);
                 LinkedList<Integer> tmp = new LinkedList<>();
                 int i = 1;
+                boolean hit = false;
                 for (; i < activity.size(); i++) {
                     if (first < activity.get(i)) {
                         maxWaveList.add(first);
+                        hit = true;
                         break;
                     }
                 }
-                tmp.addAll(activity.subList(i, activity.size()));
-                tmpList.add(tmp);
+                if (hit) {
+                    tmp.addAll(activity.subList(i, activity.size()));
+                    tmpList.add(tmp);
+                } else {
+                    maxWaveList.add(first);
+                }
             }
         }
         activities.clear();
