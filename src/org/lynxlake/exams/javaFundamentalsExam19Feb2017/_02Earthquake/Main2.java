@@ -67,7 +67,7 @@ public class Main2 {
             } else {
                 maxWaveList.add(firstInteger);
 
-                System.out.println("should remove to idx " + (indexEnd + 1) + " / " + currentActivity);
+                //System.out.println("should remove to idx " + (indexEnd + 1) + " / " + currentActivity);
 
                 currentActivity.subList(0, indexEnd + 1).clear();
                 return;
