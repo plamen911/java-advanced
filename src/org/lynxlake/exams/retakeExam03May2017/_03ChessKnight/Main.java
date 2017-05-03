@@ -1,0 +1,11 @@
+// https://judge.softuni.bg/Contests/Compete/Index/549#2
+package org.lynxlake.exams.retakeExam03May2017._03ChessKnight;
+
+/**
+ * Created by Plamen Markov on 5/3/17.
+ */
+public class Main {
+    public static void main(String[] args) {
+        
+    }
+}
